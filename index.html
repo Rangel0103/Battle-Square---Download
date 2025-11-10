@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Battle Square v7 — Download</title>
-  <meta name="description" content="Battle Square v7: battle royale 2D em LÖVE — agora com Sniper, câmera dinâmica, dano flutuante, tracers e knockback de explosões. Evolução da v6." />
+  <title>Battle Square v8 — Download</title>
+  <meta name="description" content="Battle Square v8: battle royale 2D em LÖVE — agora com sniper com escopo, ping, minimapa, regeneração de escudo e bots mais inteligentes." />
   <link rel="icon" href="assets/battlesquare.ico" />
-  <meta property="og:title" content="Battle Square v7 — Download" />
-  <meta property="og:description" content="Agora com Sniper, câmera com tremor, números de dano flutuantes e explosões que empurram. A evolução do mini battle royale 2D em LÖVE." />
+  <meta property="og:title" content="Battle Square v8 — Download" />
+  <meta property="og:description" content="Agora com sniper com escopo, sistema de ping, minimapa alternável e escudo que regenera fora de combate. A evolução do battle royale 2D em LÖVE." />
   <meta property="og:image" content="assets/battlesquare_512.png" />
   <style>
-    :root{--bg:#101218;--panel:#151821;--muted:#8ea0b8;--text:#e9eef7;--brand:#7e3aed;--brand2:#49d48d;--accent:#3aa1ff;}
+    :root{--bg:#101218;--panel:#151821;--muted:#8ea0b8;--text:#e9eef7;--brand:#7e3aed;--accent:#3aa1ff;}
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
     a{color:inherit}
@@ -43,84 +43,86 @@
     <header class="hero card">
       <img src="assets/icon.png" alt="Ícone" />
       <div>
-        <h1>Battle Square</h1>
-        <p>Battle royale 2D em LÖVE — agora com <strong>Sniper</strong>, <strong>câmera com tremor</strong>, 
-        <strong>tracers</strong>, <strong>dano flutuante</strong> e <strong>knockback de explosões</strong>. 
-        Sobreviva enquanto a tempestade se fecha em fases e os bots ficam mais agressivos!</p>
+        <h1>Battle Square v8</h1>
+        <p><strong>Battle Square</strong> é um protótipo de <strong>battle royale 2D</strong> feito em LÖVE, inspirado em Fortnite.
+        A versão <strong>v8</strong> traz mais profundidade ao combate com mira de sniper, sistema de ping, minimapa alternável e regeneração de escudo fora de combate. 
+        Construa, lute e sobreviva enquanto a tempestade se fecha por fases.</p>
         <div class="badges">
-          <span class="badge">Windows (zip)</span>
-          <span class="badge">Nova arma: Sniper</span>
-          <span class="badge">Camera shake</span>
-          <span class="badge">Dano flutuante</span>
-          <span class="badge">Tracers</span>
+          <span class="badge">Sniper com escopo</span>
+          <span class="badge">Ping e minimapa</span>
+          <span class="badge">Regeneração de escudo</span>
+          <span class="badge">Tracers visuais</span>
           <span class="badge">Knockback</span>
-          <span class="badge">Killfeed</span>
+          <span class="badge">Bots com strafe</span>
+          <span class="badge">Vitórias salvas</span>
         </div>
         <div class="cta">
           <a class="btn primary" href="downloads/Battle Square.zip" download>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Baixar v7 (Windows)
+            Baixar v8 (Windows)
           </a>
         </div>
       </div>
     </header>
 
-    <section class="card section" style="padding:18px 20px">
-      <h2>NOVIDADES DA v7</h2>
+    <section class="card section" id="novidades" style="padding:18px 20px">
+      <h2>Novidades da versão v8</h2>
       <ul class="list">
-        <li>Nova arma: <strong>Sniper (SR)</strong> — alto dano, zoom maior e precisão extrema no ADS.</li>
-        <li><strong>Câmera com tremor</strong> em tiros, explosões e dano recebido.</li>
-        <li><strong>Knockback</strong> físico de explosões que empurra bots e jogador.</li>
-        <li><strong>Números de dano flutuantes</strong>, incluindo headshots e críticos.</li>
-        <li><strong>Tracers</strong> (rastros) visuais para projéteis.</li>
-        <li><strong>Killfeed</strong> com registro de eliminações no HUD.</li>
+        <li><strong>Sniper com escopo (ADS):</strong> mira circular com zoom e retículo preciso.</li>
+        <li><strong>Sistema de ping:</strong> marque posições com <code>X</code> ou botão do meio do mouse, visível no mundo e minimapa.</li>
+        <li><strong>Minimapa alternável:</strong> pressione <code>M</code> para mostrar ou ocultar.</li>
+        <li><strong>Regeneração de escudo:</strong> fora de combate por 6s, regenera +5 escudo/s até 50.</li>
+        <li><strong>Tracers por arma:</strong> cada arma possui cor e efeito visual de trajetória próprios.</li>
+        <li><strong>Sniper com knockback:</strong> impacto mais forte nos inimigos atingidos.</li>
+        <li><strong>Bots com movimento lateral:</strong> comportamento mais imprevisível e fluido em combate.</li>
+        <li><strong>Contagem persistente de vitórias:</strong> suas vitórias agora ficam salvas entre partidas.</li>
       </ul>
     </section>
 
     <section class="card section" id="sobre" style="padding:18px 20px">
       <h2>Sobre o jogo</h2>
-      <p><strong>Battle Square</strong> é um protótipo de <strong>battle royale 2D</strong> feito em LÖVE, agora em sua versão <strong>v7</strong>. 
-      A cada rodada, o jogador enfrenta bots em um campo com obstáculos destrutíveis, 
-      construções rápidas e uma <strong>tempestade dinâmica</strong> que se fecha por fases, exigindo estratégia e movimento.</p>
+      <p><strong>Battle Square</strong> é um battle royale 2D em evolução constante. Mistura combate ágil, construção e táticas com elementos de sobrevivência. 
+      Colete recursos, construa paredes, use armas com física própria e lide com uma tempestade que se fecha por fases, forçando confrontos dinâmicos.</p>
 
-      <p>Com a nova <strong>Sniper</strong>, efeitos de <strong>câmera shake</strong>, <strong>tracers</strong> e <strong>dano flutuante</strong>, 
-      as batalhas são mais intensas e visuais. A física de explosões causa <strong>knockback</strong>, tornando o combate mais dinâmico. 
-      A cada vitória, o recorde de eliminações é salvo localmente.</p>
+      <p>Com bots ativos e tempestade progressiva, cada partida traz novos desafios. Agora com mira de Sniper, sistema de ping, minimapa, regeneração de escudo e efeitos visuais aprimorados, o jogo oferece uma experiência completa e intensa.</p>
 
       <div class="grid cols-3" style="margin-top:10px">
         <ul class="list">
-          <li><strong>Armas:</strong> Rifle, Escopeta e Sniper com cadência, precisão e recuo únicos.</li>
-          <li><strong>Construção:</strong> paredes com custo de materiais e resistência variável.</li>
-          <li><strong>Explosões:</strong> causam empurrão e dano em área.</li>
+          <li><strong>Armas:</strong> Rifle, Escopeta e Sniper, cada uma com cadência, precisão e recuo únicos.</li>
+          <li><strong>Picareta:</strong> destrua obstáculos e colete materiais para construir paredes.</li>
+          <li><strong>Construção:</strong> posicione defesas táticas com custo de material.</li>
         </ul>
         <ul class="list">
-          <li><strong>Ambiente:</strong> obstáculos destrutíveis, partículas e efeitos de câmera.</li>
-          <li><strong>Bots:</strong> inteligentes, reagem à tempestade e usam cobertura.</li>
-          <li><strong>Tempestade:</strong> círculo com múltiplas fases e preview da próxima área segura.</li>
+          <li><strong>Tempestade:</strong> fecha por fases com previsão da próxima zona segura.</li>
+          <li><strong>Airdrops:</strong> suprimentos raros caem periodicamente pelo mapa.</li>
+          <li><strong>Bots:</strong> inimigos reagem, buscam cobertura e fazem strafe em combate.</li>
         </ul>
         <ul class="list">
-          <li><strong>Feedback:</strong> números de dano, killfeed e HUD aprimorado.</li>
-          <li><strong>Visual:</strong> câmera dinâmica e partículas refinadas.</li>
-          <li><strong>Engine:</strong> LÖVE 2D — leve e sem instalação necessária.</li>
+          <li><strong>Ping:</strong> marque posições no mundo e no minimapa.</li>
+          <li><strong>Escudo:</strong> regenera automaticamente fora de combate.</li>
+          <li><strong>Persistência:</strong> recorde de eliminações e vitórias salvos entre sessões.</li>
         </ul>
       </div>
     </section>
 
-    <section class="card section" style="padding:18px 20px">
+    <section class="card section" id="controles" style="padding:18px 20px">
       <h2>Controles</h2>
       <div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
         <ul class="list">
           <li><strong>A/D</strong> mover | <strong>W/ESP</strong> pular</li>
-          <li><strong>Shift</strong> correr | <strong>Ctrl</strong> deslizar/agachar</li>
-          <li><strong>Mouse Esq.</strong> atirar | <strong>Mouse Dir.</strong> mirar (zoom/ADS)</li>
+          <li><strong>Shift</strong> correr | <strong>Ctrl</strong> agachar/deslizar</li>
+          <li><strong>Mouse Esq.</strong> atirar | <strong>Mouse Dir.</strong> mirar (ADS / escopo Sniper)</li>
           <li><strong>Q</strong> alterna Rifle / Escopeta / Sniper</li>
+          <li><strong>C</strong> usa picareta</li>
+          <li><strong>F</strong> constrói parede</li>
         </ul>
         <ul class="list">
-          <li><strong>C</strong> usar picareta (melee)</li>
-          <li><strong>F</strong> construir parede</li>
-          <li><strong>G</strong> lançar granada</li>
-          <li><strong>E</strong> abrir airdrop / coletar item</li>
-          <li><strong>R</strong> recarrega ou reinicia após morte</li>
+          <li><strong>G</strong> lança granada</li>
+          <li><strong>E</strong> abre airdrops</li>
+          <li><strong>X</strong> ou <strong>Mouse do meio</strong> marca posição (ping)</li>
+          <li><strong>M</strong> alterna minimapa</li>
+          <li><strong>R</strong> recarrega / reinicia partida</li>
+          <li><strong>ESC</strong> sair do jogo</li>
         </ul>
       </div>
     </section>
@@ -128,7 +130,7 @@
     <section class="card section" style="padding:18px 20px">
       <h2>Como instalar</h2>
       <ol class="list" style="list-style:decimal;padding-left:20px">
-        <li>Baixe o <strong>ZIP da v7</strong> acima.</li>
+        <li>Baixe o <strong>ZIP da v8</strong> acima.</li>
         <li>Extraia numa pasta (ex.: <code>C:\\Jogos\\Battle Square</code>).</li>
         <li>Execute <code>Battle Square.exe</code>. Não precisa instalar o LÖVE.</li>
       </ol>
@@ -140,7 +142,7 @@
       <ul class="list">
         <li>Windows 10/11 (64-bit)</li>
         <li>CPU dual-core | GPU integrada</li>
-        <li>4 GB RAM | ~150 MB de espaço</li>
+        <li>4 GB RAM | ~160 MB de espaço</li>
       </ul>
     </section>
 
